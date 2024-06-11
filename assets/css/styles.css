@@ -1,30 +1,19 @@
-/* ----------------| Fuente Poppins |--------------- */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;500;600;700&display=swap');
 
-/* ----------------| Variables Css |--------------- */
 :root{
     --header-height: 3.5rem;
-
-    /* Colors */
     --first-color: #FF8C42;
     --second-color: #583E23;
-
-    /* Font and typography */
     --body-font: 'Quicksand', sans-serif;
     --alt-font: 'Dancing Script', cursive;
-
     --h1-font-size: 2.5rem;
     --h2-font-size: 2rem;
     --h3-font-size: 1.5rem;
     --normal-font-size: .938rem;
     --small-font-size: .75rem;
-
-    /* Font weight */
     --font-medium: 500;
     --font-semibold: 600;
     --font-bold: 700;
-
-    /* z Index */
     --z-tooltip: 10;
     --z-fixed: 100;
 }
@@ -35,7 +24,6 @@
     }
 }
 
-/* ----------------| Base |--------------- */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -43,7 +31,6 @@
 }
 
 html {
-    /* Scroll light*/
     scroll-behavior: smooth;
     font-size: 100%;
 }
@@ -52,7 +39,7 @@ body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: #F5EEE6;
-    transition: .4s; /*For animation dark mode*/
+    transition: .4s;
 }
 
 h2 {
@@ -77,7 +64,6 @@ img {
     aspect-ratio: attr(width) / attr(height);
 }
 
-/* ----------------| Reusable Css Classes |--------------- */
 .container {
     max-width: 1024px;
     margin-left: 1.5rem;
@@ -102,10 +88,9 @@ img {
 }
 
 .main {
-    overflow: hidden; /* For animation ScrollReveal */
+    overflow: hidden;
 }
 
-/* ----------------| Header |--------------- */
 .header{
     width: 100%;
     background-color: transparent;
@@ -114,6 +99,7 @@ img {
     left: 0;
     z-index: var(--z-fixed);
 }
+
 .nav{
     position: relative;
     height: var(--header-height);
@@ -121,6 +107,7 @@ img {
     justify-content: space-between;
     align-items: center;
 }
+
 .nav__logo{
     display: flex;
     align-items: center;
@@ -134,7 +121,6 @@ img {
     cursor: pointer;
 }
 
-/* Mobile menu action */
 @media screen and (max-width: 767px) {
     .nav__menu{
         position: fixed;
@@ -154,9 +140,11 @@ img {
     text-align: center;
     row-gap: 2rem;
 }
+
 .nav__link{
     color: white;
 }
+
 .nav__close{
     position: absolute;
     top: 1rem;
@@ -165,18 +153,15 @@ img {
     cursor: pointer;
 }
 
-/* Changes in the header */
 .scroll-header{
     background-color: var(--first-color);
 }
 
-/* Active link */
 .active-link{
     color: white;
     text-decoration: underline;
 }
 
-/* Active link menu */
 .active-menu{
     border-radius: .625rem;
     background-color: var(--first-color);
@@ -184,18 +169,16 @@ img {
     color: white;
 }
 
-/* Show menu */
 .show-menu {
     top: 0;
 }
 
-/* ----------------| Home |--------------- */
 .home{
     height: 28.125rem;
     background-image: linear-gradient(180deg, rgba(88, 62, 35, 0.8) 0%, rgba(30, 30, 30, 0.8) 100%), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
-    /* background-repeat: no-repeat; */
     background-size: cover;
 }
+
 .home__title{
     font-size: 2.25rem;
     color: var(--first-color);
@@ -203,16 +186,17 @@ img {
     font-family: var(--alt-font);
     margin-bottom: 1.25rem;
 }
+
 .home__text{
     color: white;
     margin-bottom: 1.875rem;
 }
+
 .home__buttons{
     display: flex;
     gap: 1.5rem;
 }
 
-/* ----------------| Buttons |--------------- */
 .button{
     border: 1px solid var(--first-color);
     border-radius: .625rem;
@@ -220,10 +204,12 @@ img {
     padding: .75rem 2rem;
     color: white;
 }
+
 .button:hover{
     background-color: #FF9853;
     transition: .3s;
 }
+
 .button--transparent{
     border: 1px solid var(--first-color);
     color: var(--first-color);
@@ -231,25 +217,28 @@ img {
     padding: .75rem 2rem;
     background-color: transparent;
 }
+
 .button--transparent:hover{
     background-color: var(--first-color);
     transition: .3s;
     color: white;
 }
 
-/* ----------------| About |--------------- */
 .about{
     padding: 0;
     position: relative;
 }
+
 .about__container{
     gap: 0;
     position: relative;
     bottom: 50px;
 }
+
 .about__img img{
     border-radius: .625rem;
 }
+
 .about__data{
     position: relative;
     bottom: 50px;
@@ -258,9 +247,11 @@ img {
     box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
     border-radius: .625rem;
 }
+
 .about__subtitle{
     text-align: start;
 }
+
 .about__data-img{
     position: absolute;
     width: 120px;
@@ -268,7 +259,6 @@ img {
     right: 0;
 }
 
-/* Rama de cafe one*/
 .rama-de-cafe-one{
     position: absolute;
     left: -149px;
@@ -279,7 +269,6 @@ img {
     z-index: -10;
 }
 
-/* ----------------| Menu |--------------- */
 .menu{
     padding-top: 50px;
     position: relative;
@@ -290,23 +279,27 @@ img {
     overflow-x: auto;
     justify-content: center;
 }
-/* Ocultar scroll */
+
 .menu__filters::-webkit-scrollbar{
     display: none;
 }
+
 .menu__item{
     font-weight: var(--font-medium);
     border: 0;
     padding: .3125rem 1.25rem;
     border-radius: .3125rem;
 }
+
 .menu__item:hover{
     background-color: var(--first-color);
     padding: .3125rem 1.25rem;
 }
+
 .menu__cards{
     grid-template-columns: 1fr;
 }
+
 .menu__card{
     display: flex;
     align-items: center;
@@ -314,22 +307,25 @@ img {
     border-radius: .625rem;
     padding: 1.25rem .5rem;
 }
+
 .menu__card-img{
     width: 64px;
 }
+
 .menu__card-data{
     width: 100%;
 }
+
 .menu__card-title{
     font-weight: var(--font-semibold);
     font-size: 1.125rem;
     margin-bottom: .3125rem;
 }
+
 .menu__card-price{
     font-size: 1.5rem;
 }
 
-/* Rama de cafe two*/
 .rama-de-cafe-two{
     position: absolute;
     right: -149px;
@@ -340,10 +336,10 @@ img {
     z-index: -10;
 }
 
-/* ----------------| gallery |--------------- */
 .gallery__container{
     grid-template-columns: 1fr;
 }
+
 .gallery__img img{
     border-radius: .625rem;
     background-size: cover;
@@ -352,10 +348,10 @@ img {
     width: 100%;
 }
 
-/* ----------------| Phrase |--------------- */
 .phrase{
     position: relative;
 }
+
 .phrase_text{
     font-size: 1.75rem;
     font-family: var(--alt-font);
@@ -364,7 +360,6 @@ img {
     margin-bottom: 8.75rem;
 }
 
-/* Rama de cafe three*/
 .rama-de-cafe-three{
     position: absolute;
     right: -282px;
@@ -374,11 +369,11 @@ img {
     opacity: 0.3;
 }
 
-/* ----------------| Footer |--------------- */
 .footer__container{
     grid-template-columns: 1fr;
     position: relative;
 }
+
 .footer-sub__container{
     background-color: var(--first-color);
     padding: 3rem 1.125rem;
@@ -387,18 +382,21 @@ img {
     position: relative;
     top: -50%;
 }
+
 .footer-sub__text{
     text-align: center;
     font-size: 1.125rem;
     padding-bottom: .625rem;
     font-weight: var(--font-medium);
 }
+
 .footer-sub__content{
     display: flex;
     background-color: white;
     border-radius: .625rem;
     padding: .3125rem .5rem;
 }
+
 .footer-sub__email{
     border: 0;
     width: 100%;
@@ -406,6 +404,7 @@ img {
     padding: .9375rem .375rem;
     border-radius: .625rem;
 }
+
 .footer-sub__button{
     border: 0;
     color: white;
@@ -429,6 +428,7 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .footer__logo{
     color: white;
     font-size: 1.375rem;
@@ -436,10 +436,12 @@ img {
     display: flex;
     margin-bottom: .625rem;
 }
+
 .footer__map{
     width: 100%;
     border-radius: .625rem;
 }
+
 .footer__title{
     color: white;
     font-size: 1.125rem;
@@ -447,30 +449,38 @@ img {
     margin-bottom: .9375rem;
     margin-top: 2rem;
 }
+
 .footer__link li{
     margin-bottom: .625rem;
 }
+
 .footer__link li a{
     color: white;
 }
+
 .footer__item{
     display: flex;
     align-items: center;
 }
+
 .footer__item i{
     margin-right: .5rem;
 }
+
 .footer__link--flex{
     display: flex;
     gap: .5rem;
 }
+
 .footer__icon{
     color: white;
     font-size: 1.25rem;
 }
+
 .footer__info{
     margin-top: .625rem;
 }
+
 .footer__copy{
     color: white;
     display: block;
@@ -478,7 +488,6 @@ img {
     margin-bottom: 2.375rem;
 }
 
-/* ----------------| Scroll Bar |--------------- */
 ::-webkit-scrollbar{
     width: .6rem;
     background-color: hsl(228, 4%, 15%);
@@ -492,7 +501,6 @@ img {
     background-color: #FF9853;
 }
 
-/* ----------------| Scroll Up |--------------- */
 .scrollup{
     position: fixed;
     right: 1.25rem;
@@ -507,17 +515,15 @@ img {
     z-index: var(--z-tooltip);
     transition: .3s;
 }
+
 .scrollup:hover{
     transform: translateY(-.25rem);
 }
 
-/* Show Scroll Up*/
 .show-scroll{
     bottom: 1.25rem;
 }
 
-/* ----------------| Breakpoints |--------------- */
-/* For small devices */
 @media screen and (max-width: 340px){
     .container{
         margin-left: 1rem;
@@ -525,7 +531,6 @@ img {
     }
 }
 
-/* For medium devices */
 @media screen and (min-width: 576px){
     .nav__menu{
         width: 362px;
@@ -600,7 +605,6 @@ img {
     }
 }
 
-/* For large devices */
 @media screen and (min-width: 1023px){
     .section__title {
         font-size: 4rem;
@@ -679,14 +683,12 @@ img {
     }
 }
 
-/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
 @media screen and (min-width: 2048px) {
     body{
         zoom: 1.3;
     }
 }
 
-/* For 4K resolutions (3840 x 2160, 4096 x 2160) */
 @media screen and (min-width: 3840px) {
     body{
         zoom: 2.3;
